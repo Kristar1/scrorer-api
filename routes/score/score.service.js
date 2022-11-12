@@ -15,10 +15,17 @@ const addScore = async({ gameId, userId, score }) => {
   
 };
 
-const updateScore = async({ gameId, userId, score }) => {
-    const updatedScore = await Score.findOneAndUpdate({gameId, userId},{score} )
-  return {gameId, userId, score}
-};
+const updateScore = ({gameId, userId, score}) => {
+    return Score.findOneAndUpdate({
+      gameId,
+      userId
+    }, {
+      score
+    },
+    {
+      new: true
+    });
+  }
 const deleteScore = async({ gameId, userId}) => {
     const deletedScore = Score.findOne({gameId, userId})
     await deletedScore.remove()
