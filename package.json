@@ -1,0 +1,19 @@
+{
+  "name": "scrorer-api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "joi": "^17.7.0",
+    "mongoose": "^6.7.2",
+    "morgan": "~1.9.1",
+    "ngrok": "^4.3.3",
+    "nodemon": "^2.0.20"
+  }
+}
